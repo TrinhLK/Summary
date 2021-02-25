@@ -6,13 +6,18 @@
   - system's state
   - Coordination
   - reconfiguration
+  - component's interface
+  - adaptation of apps
+
 Resource >< environment
 2. Check again the comment part (the comparison)
 3. Write some safety properties
 
 # Doing
 ## A. Definitions
-1. Product configuration process
+1. Product configuration process  
+Configuration consists in deploying the system, i.e. in placing each of its elements at a location, configuring the hosting machine so that the software element can run properly and establishing the connections among the system components.
+
   - Given:
     1. set of components including: set of *properties*, *ports* for connecting to other components, *constraints* (port constraints and other structural constraints)
     2. description of the desired configuration
@@ -20,6 +25,7 @@ Resource >< environment
   - Build: a configuration that satisfy all the requirements
     - a set of components
     - a description of the connections between the components.
+
 
 2. Specification: a set of documented requirements to be satisfied
 
@@ -32,6 +38,21 @@ A computer program stores data in variables, which represent storage locations i
 
 6. Cloud applications: are distributed applications composed of a set of VMs running a set of interconnected software components.  
 After deployment of these applications, some reconfiguration operations are required for setting up new virtual machines, replicating some of them, destroying or adding virtual machines, handling VM failures, and adding or removing components hosted on a VM.
+
+7. Component's interfaces:  
+At the lower layer, the system has a pool of components where each component provides some services via its interfaces.
+
+8. The adaptation of apps
+An application can be adapted to evolve in the execution environment by  
+1) adding or removing components,  
+2) changing some of the existing ones,  
+3) changing the connections among the components, or  
+4) reallocating components to differ- ent execution locations.
+
+9. reconfiguration  
+Since the structure of components can be used at run time to discover services or adapt components in order to move and execute them at new locations, correct dynamic recon- figuration becomes an important aspect of the system execution.
+System reconfiguration can involve any combination of these four kinds of adaptation in **8**.
+
 
 ## B. Check the comparison
 1. Formal Design of Dynamic Reconfiguration Protocol for Cloud Applications [2]  

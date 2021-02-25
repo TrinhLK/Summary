@@ -11,6 +11,10 @@ header-includes: |
 abstract: This is a pandoc test with Markdown + inline LaTeX
 ---
 # To-do List
+## 22/02 - 26/02
+- Read more papers for safety properties 
+- [ ] Specify safety properties
+- [ ]
 ## 09/02
 - [ ] Read paper: Fault Tolerance Techniques and Comparative Implementation in Cloud Computing
 
