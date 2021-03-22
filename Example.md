@@ -70,8 +70,8 @@ số lượng tomcat connect tới 1 database
 
 5. A VMs cannot be duplicated.
 **Behaviors properties**
-1. if any VM is overloaded then the jobs will be passed to the under-utilized VM.
-2. If there are more than one VMs for a component types, new executions will be distributed to a less status VMs.
+1. if any VM is overloaded then the jobs will be passed to the under-utilized VM.  
+~~2. If there are more than one VMs for a component types, new executions will be distributed to a less status VMs.~~
 3. If L increase/decrease in T_e time, R will increase/decrease correspondingly
 4. If the VMs status is over a threshold in T_bru time, no new jobs is executed in this VMs until the status down.
 
@@ -88,4 +88,4 @@ số lượng tomcat connect tới 1 database
 1. Active components cannot be connected to inactive components
 2. The components has no connections to it before the configuration
 2. After configuring, the components will eventually start.
-3. An application cannot be deployed in two or more different Apache servers.
+~~3. An application cannot be deployed in two or more different Apache servers.~~
