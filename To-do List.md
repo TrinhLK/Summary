@@ -1,4 +1,7 @@
-
+### 22/03
+- Rewrite the LAMP case study separately (instead of using inheritance)
+- Followed the Pub-Sub case study of Simon to make queue commands
+---
 Exercise 8 (Canonical formulæ). Write the LTL formulæ for the following properties (p and q are state
 properties):  
 ***1. (Safety) p holds always.***
