@@ -1,6 +1,24 @@
-### 22/03
+### 31/03/2021
+Simon:
+Chỉ có configure, không hiện start sau đó là vì DataWise chuyển đồng thời cả Monitor và VM --> không nhận được data --> không check đk được \
+If I follow the image that using Monitor, I can make a synchron between Monitor and MySQL.fail because it's Spontaneous port: No, you can transfer data from this port to other.
+
+### 22/03/2021
 - Rewrite the LAMP case study separately (instead of using inheritance)
 - Followed the Pub-Sub case study of Simon to make queue commands
+
+I re-designed the system several times but it didn't work as I expected.
+- I setup that if MySQL fail, Tomcat should stop before connecting to another MySQL. There is two cases happened:
+1. Tomcat auto-connect to another MySQL and ignore Stopping
+2. After MySQL fails, Tomcat never reacts again.
+- I tried to follow the Pub-Sub example but it seems lack the GlueBuilder file and the MainFile following the design.
+
+Questions:
+- Spontaneous port is the actor makes the system environment's change. Thus, it shouldn't appear in the Glue file, which specify how the components interact with each other.
+- How to prove by hand the equivalence between a function and the set?
+
+The most important thing in JavaBIP is specifying GlueBuilder.
+
 ---
 Exercise 8 (Canonical formulæ). Write the LTL formulæ for the following properties (p and q are state
 properties):  
