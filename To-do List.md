@@ -1,8 +1,27 @@
+### 06/04/2021
+Sau khi gọi Spontaneous port thì chuyển tới state Failing, tạo một transtion từ failing tới Error. Sau đó synchronize makeError of C_MySQL and stop() of Tomcat
+
+Việc chuyển data dạng BIPActor ở bản hiện tại là bug và Larisa đã fixed nó, liên hệ với Larisa để biết chi tiết
+
+Ví dụ hiện tại cho bài báo thuộc dạng quá đơn giản nên ko đáng để được publish, do đó phải làm một cái to - chính là cái hiện tại để chứng minh rằng việc áp dụng cách tiếp cận đc đề xuất là hợp lý.
+- Thiết kế ban đầu chỉ có stop, ko có cái trung gian giữa fail và Error --> Chương trình ko chạy
+- Sau khi chỉnh sửa có thêm thì nó sẽ chạy
+
 ### 31/03/2021
 Simon:
 Chỉ có configure, không hiện start sau đó là vì DataWise chuyển đồng thời cả Monitor và VM --> không nhận được data --> không check đk được \
+stop: cannot be invoked when using data in guard. \
 If I follow the image that using Monitor, I can make a synchron between Monitor and MySQL.fail because it's Spontaneous port: No, you can transfer data from this port to other.
 
+engine take value of data parse to component to select. If add a port require some data, provide data not fit -> break.
+define both in guard and transition \
+
+failing -> error
+ask larisa for fixing bugs
+reuse to validate of the example
+manner that it can solve the
+system has to work with reasonable assumption
+Sau khi gọi hàm
 ### 22/03/2021
 - Rewrite the LAMP case study separately (instead of using inheritance)
 - Followed the Pub-Sub case study of Simon to make queue commands
