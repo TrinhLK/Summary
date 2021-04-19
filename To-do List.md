@@ -1,3 +1,21 @@
+### 19/04/2021
+- Hoàn thiện ví dụ trên JavaBIP (gồm Apache)
+- Chỉnh sửa OCCI để có thể viết guards và spontaneous
+OCCIware
+Need to extend occi to provide additional information.
+How to formulate requirements
+How do we provide requirements extends occi metamodel?
+have components, description
+inject the failer \
+Early validation of system requirements and design through correctness-byconstruction: how to specify properties and patterns \
+what do we have to add to occi? \
+how to decide which one is spontaneous? \
+refine the model but does not change the behaviours? \
+Discuss with Philippe
+### 12/04/2021
+- Kiểm tra lại sự khác nhau giữa: requiers (Tomcat.stop, Tomcat.stop) và requires (Tomcat.stop, stop) \
+2 trackers, 2 peers \
+
 ### 06/04/2021
 Sau khi gọi Spontaneous port thì chuyển tới state Failing, tạo một transtion từ failing tới Error. Sau đó synchronize makeError of C_MySQL and stop() of Tomcat
 
