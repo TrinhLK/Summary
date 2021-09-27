@@ -1,3 +1,96 @@
+## 09/2021
+DSL:
+1. Create boilerplates for requirements and safety properties (Early Validation, CausualSemantics)
+2. Prove the reliability
+3. Integrate to OCCIware
+4. Read papers and prepare for the confs
+
+### 27/09
+**Notes:**  
+
+### 25/09
+~Req của Simon có vấn đề, khi sửa lại thì sai so với Connector được vẽ trong bài?~
+
+Try to write boilerplates and generate the skolemized formulas directly.
+
+Why? If BP --> FOL --> skolemized: complex, contradict with our purpose: simplify the connector generator.
+
+~Phần nào trong Java Connector thể hiện speak thì ko listen?~
+### 21/09
+**Skolemization**  
+Simon's questions:
+1. How to know that the semantic of the requirements is preserved? (semantic not info)
+2. Is the synthesis of the JavaBIP macro correct? (need to prove)  
+
+Answer:
+1. DONE. Proved using Isabelle.
+
+2. DONE. Convert to set of interactions. (file Simon-2)
+
+**Remaining**: 14/09 - items 2, 3.  
+How to determine the formulae of BIP to prove the equivalence?
+
+**Next week: Oct 4**
+- Algorithm to convert CNF to dual-Horn
+- Modify the paper following FASE's style (deadline Oct 14)
+
+### 14/09
+1. Finish Simon's formulae: ***DONE***
+	- User must have the knowledge of Logic to make it
+
+2. Complete boilerplate:
+	- How to handle relations like *either..or*, *neither..nor*, *not*?
+		- Need to convert to FOL formulas and do transformation.
+
+3. **Current**: Propose a DSL to support users to write a natural-like language:
+	- Convert boilerplate --> FOL. *Can we skolemize directly from the boilerplate?*
+	- Skolemize: add information to complete the semantic
+	- Convert to dual-Horn (***writing algorithm***)
+
+**Approach**:
+	- Prove the reliability of proposed DSL in specifying the system requirements and making JavaBIP code.
+	- Provide algorithm/tool to generate JavaBIP code (or Connector) from the DSL (can make it later).
+
+**Question:**
+How does JavaBIP specify "at most one" Peer speak? Which is the part present it? A: From the boilerplate --> JavaBIP following the process in Simon's paper
+
+### 10/09
+trackers-peers examples: Simon gives his FOL formulae  
+**Result**: Done for generate JavaBIP macro and interaction set but:
+  - Couldn't generate "accepts" code
+  - Couldn't get the right BIP connector  
+
+**Next**:
+  - Compare his current FOL with the one in the last meeting to show the different BIP Connectors from the same meaning FOL formulas
+  - Make a reasonable FOL: should include listen_y' => ~speak_y'
+**Notes**: Đọc lại định nghĩa Prefix và Main, kiểm tra lại cách biểu diễn câu điều kiện trong FOL. Thử broadcast lên trước.
+Khi chuyển từ Natural Lang thành FOL, quan trọng là ngữ nghĩa được đảm bảo.
+
+---
+stt is a part of cdt
+relation between instances
+grammar we can have relation between instances 5:50-
+etablishing
+querying relation input
+On, If, while
+grammar, forget
+next formalize -> FOL, rely
+derive boolean formalize, constrain
+### 22/04/2021
+while: continous interval
+grammar of the language
+translation to English
+all the terms you used are defined
+meaning of while, if, ...
+
+Giải thích từng từ cũng như ngữ pháp của ngôn ngữ mình đề xuất sao cho khi nhìn vào rules, người đọc có thể chuyển nó sang tiếng Anh một cách dễ dàng
+
+### 22/04/2021
+- Viết các safety properties sử dụng boilerplates \
+Mục tiêu:
+- Người dùng chỉ cần viết các properties theo template có sẵn đó. Hệ thống đọc và sinh ra các connectors tương ứng.
+- Làm thế nào để từ một FSM có thể tự sinh các buffer states.
+
 ### 19/04/2021
 - Hoàn thiện ví dụ trên JavaBIP (gồm Apache)
 - Chỉnh sửa OCCI để có thể viết guards và spontaneous

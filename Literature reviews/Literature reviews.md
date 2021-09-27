@@ -1,3 +1,8 @@
+# List of terms
+1. exogenous vs endogenous: advantages and disadvantages
+2. Exogenous's frameworks
+3. The advantages of BIP and JavaBIP
+
 # To-do list
 - What kind of properties will be use?
 - Object considered?
