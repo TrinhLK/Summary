@@ -107,6 +107,11 @@ Each VM embeds a local reconfiguration agent that interacts with the other remot
 
 Each component may provide services via exports and require services via imports
 
+Correct-by-Construction(CbyC):  
+Correctness by Construction (CbyC), is a combination of formal methods and incremental developments.  
+CbyC is a development style that allows application to progressively evolve by re- finement via small steps. The key of the approach is the correctness warranty that the application behaves as specified at each step.
+
+It is proved to be a promising method thanks to the benefits obtained while developing a software, such as a decrease of ambiguity (the major cause of bugs), an avoidance of repetition, management, etc. The method has been applied in industry, demonstrating its effectiveness for reducing defects and increasing productivity, especially in order to develop security and safety-critical applications
 ---
 ## Discussion
 - A configuration might live in some system's states
