@@ -3,7 +3,7 @@ DSL:
 1. Create boilerplates for requirements and safety properties (Early Validation, CausualSemantics)
 2. Prove the reliability
 3. Integrate to OCCIware
-4. Read papers and prepare for the confs
+4. Read papers and prepare for the confs 
 
 ### 27/09
 **Notes:**  
