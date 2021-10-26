@@ -80,7 +80,7 @@ System reconfiguration can involve any combination of these four kinds of adapta
 6. All the required components/VM of the failed one will connect to new provider.
 ---
 ## Other terms  
-I. Autonomic computing of cloud
+### 1. Autonomic computing of cloud
 
 A loop with steps:
   1. monitor the system or the infrastructure
@@ -89,7 +89,7 @@ A loop with steps:
 
 Autonomic Manager (AM)  is based on a constraint solver which aims at finding the optimal configuration for the modeled XaaS
 
-II. Reconfiguration  
+### 2. Reconfiguration  
 Need to answer Five questions:
 1. why software has to be reconfigured?  
  hardware or software fault tolerance, mobile users, dynamicity of software services, etc
@@ -100,18 +100,19 @@ low-latency applications and systems
 5. when to reconfigure it?
 reconfiguration operations: instantiating/destroying VMs, adding/removing components
 
-III. Reconfiguration agents:  
+### 3. Reconfiguration agents:  
 The reconfiguration agent may generate an alternative or a new configuration if it is feasible to adapt the change in requirements or environment.
 
 Each VM embeds a local reconfiguration agent that interacts with the other remote agents. For each component, the VM agent tries to satisfy its required services by connecting them to their providers in order to start the component.
 
 Each component may provide services via exports and require services via imports
 
-Correct-by-Construction(CbyC):  
+### 4. Correct-by-Construction(CbyC):  
 Correctness by Construction (CbyC), is a combination of formal methods and incremental developments.  
-CbyC is a development style that allows application to progressively evolve by re- finement via small steps. The key of the approach is the correctness warranty that the application behaves as specified at each step.
+CbyC is a development style that allows application to progressively evolve by refinement via small steps. The key of the approach is the correctness warranty that the application behaves as specified at each step.
 
 It is proved to be a promising method thanks to the benefits obtained while developing a software, such as a decrease of ambiguity (the major cause of bugs), an avoidance of repetition, management, etc. The method has been applied in industry, demonstrating its effectiveness for reducing defects and increasing productivity, especially in order to develop security and safety-critical applications
+
 ---
 ## Discussion
 - A configuration might live in some system's states
